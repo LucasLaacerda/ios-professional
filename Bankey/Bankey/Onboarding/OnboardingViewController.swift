@@ -14,8 +14,9 @@ class OnboardingViewController: UIViewController {
     let imageViewOnboarding = UIImageView()
     let labelOnboarding = UILabel()
     
-    
-    
+    let imageNameOnboarding: String
+    let textOnboarding: String
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,16 @@ class OnboardingViewController: UIViewController {
         layout()
     }
     
+    init(imageNameOnboarding: String, textOnboarding: String){
+        self.imageNameOnboarding = imageNameOnboarding
+        self.textOnboarding = textOnboarding
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }
 
@@ -30,7 +41,7 @@ class OnboardingViewController: UIViewController {
 extension OnboardingViewController {
     
     private func style() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         // StackView
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -39,7 +50,7 @@ extension OnboardingViewController {
         // ImageView
         imageViewOnboarding.translatesAutoresizingMaskIntoConstraints = false
         imageViewOnboarding.contentMode = .scaleAspectFit
-        imageViewOnboarding.image = UIImage(named: "delorean")
+        imageViewOnboarding.image = UIImage(named: imageNameOnboarding)
         
         // Label
         labelOnboarding.translatesAutoresizingMaskIntoConstraints = false
@@ -47,7 +58,7 @@ extension OnboardingViewController {
         labelOnboarding.font = UIFont.preferredFont(forTextStyle: .title3)
         labelOnboarding.adjustsFontForContentSizeCategory = true
         labelOnboarding.numberOfLines = 0
-        labelOnboarding.text = "Bankey is faster, easier to use, and has a brandnew look and feel that will make you feel like you are back in 1989."
+        labelOnboarding.text = textOnboarding
         
     }
     
