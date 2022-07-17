@@ -21,7 +21,9 @@ public class LocalState {
         
         set(newValue){
             UserDefaults.standard.set(newValue, forKey: Keys.hasOnboarded.rawValue)
-            UserDefaults.standard.synchronize()
+            //UserDefaults.standard.synchronize()
+            //A partir do iOS 12 nao é mais necessario fazer sincronizacao
+            //Apple ja faz por tras dos panos pra gente
         }
         
     }
