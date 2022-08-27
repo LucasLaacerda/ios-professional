@@ -23,7 +23,7 @@ class OnboardingViewController: UIViewController {
         style()
         layout()
     }
-    
+
     init(imageNameOnboarding: String, textOnboarding: String){
         self.imageNameOnboarding = imageNameOnboarding
         self.textOnboarding = textOnboarding
