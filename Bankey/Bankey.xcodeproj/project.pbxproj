@@ -14,6 +14,8 @@
 		8C95897628BA85E000D9EDB1 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95897528BA85E000D9EDB1 /* UIViewController+Utils.swift */; };
 		8C95897828BAA97000D9EDB1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95897728BAA96F00D9EDB1 /* MainViewController.swift */; };
 		8C95897B28BABC3000D9EDB1 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95897A28BABC3000D9EDB1 /* AccountSummaryViewController.swift */; };
+		8C95897D28BAC2D400D9EDB1 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95897C28BAC2D400D9EDB1 /* AccountSummaryHeaderView.swift */; };
+		8C95897F28BAC34C00D9EDB1 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C95897E28BAC34C00D9EDB1 /* AccountSummaryHeaderView.xib */; };
 		8CB7E87928721A140070FAB1 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E87828721A140070FAB1 /* OnboardingContainerViewController.swift */; };
 		8CB7E87B287230770070FAB1 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB7E87A287230770070FAB1 /* OnboardingViewController.swift */; };
 		8CCC45CC285A262D0070E0CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCC45CB285A262D0070E0CF /* LoginView.swift */; };
@@ -31,6 +33,8 @@
 		8C95897528BA85E000D9EDB1 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		8C95897728BAA96F00D9EDB1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8C95897A28BABC3000D9EDB1 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		8C95897C28BAC2D400D9EDB1 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
+		8C95897E28BAC34C00D9EDB1 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		8CB7E87828721A140070FAB1 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		8CB7E87A287230770070FAB1 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		8CCC45CB285A262D0070E0CF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				8C95897A28BABC3000D9EDB1 /* AccountSummaryViewController.swift */,
+				8C95897C28BAC2D400D9EDB1 /* AccountSummaryHeaderView.swift */,
+				8C95897E28BAC34C00D9EDB1 /* AccountSummaryHeaderView.xib */,
 			);
 			path = AccountSummary;
 			sourceTree = "<group>";
@@ -183,6 +189,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C95897F28BAC34C00D9EDB1 /* AccountSummaryHeaderView.xib in Resources */,
 				8C39F2602856365100140290 /* LaunchScreen.storyboard in Resources */,
 				8C39F25D2856365100140290 /* Assets.xcassets in Resources */,
 			);
@@ -198,6 +205,7 @@
 				8C95897628BA85E000D9EDB1 /* UIViewController+Utils.swift in Sources */,
 				8CCC45CC285A262D0070E0CF /* LoginView.swift in Sources */,
 				8CEC5C24288491FB001B3D0D /* LocalState.swift in Sources */,
+				8C95897D28BAC2D400D9EDB1 /* AccountSummaryHeaderView.swift in Sources */,
 				8CEC5C212883806A001B3D0D /* DummyViewController.swift in Sources */,
 				8C39F2582856365000140290 /* LoginViewController.swift in Sources */,
 				8CB7E87B287230770070FAB1 /* OnboardingViewController.swift in Sources */,
