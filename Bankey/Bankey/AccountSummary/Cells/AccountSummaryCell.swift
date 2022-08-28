@@ -21,7 +21,7 @@ class AccountSummaryCell: UITableViewCell {
     let chevronImageView = UIImageView()
     
     static let reuseID = "AccountSummaryCell"
-    static let rowHeight: CGFloat = 100
+    static let rowHeight: CGFloat = 112
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -105,7 +105,7 @@ extension AccountSummaryCell {
     private func setupAmmountBalnaceLabel(){
         ammountBalanceLabel.translatesAutoresizingMaskIntoConstraints = false
         ammountBalanceLabel.textAlignment = .right
-        ammountBalanceLabel.text = "$929,466.63"
+        ammountBalanceLabel.attributedText = makeFormattedBalance(dollars: "929,466", cents: "63")
     }
     
     private func setupChevronImageView(){
@@ -114,4 +114,19 @@ extension AccountSummaryCell {
         chevronImageView.image = chevronImage
         contentView.addSubview(chevronImageView)
     }
+    
+    private func makeFormattedBalance(dollars: String, cents: String) -> NSMutableAttributedString {
+            let dollarSignAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .callout), .baselineOffset: 8]
+            let dollarAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .title1)]
+            let centAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.preferredFont(forTextStyle: .footnote), .baselineOffset: 8]
+            
+            let rootString = NSMutableAttributedString(string: "$", attributes: dollarSignAttributes)
+            let dollarString = NSAttributedString(string: dollars, attributes: dollarAttributes)
+            let centString = NSAttributedString(string: cents, attributes: centAttributes)
+            
+            rootString.append(dollarString)
+            rootString.append(centString)
+            
+            return rootString
+        }
 }
